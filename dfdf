@@ -1,0 +1,57 @@
+import pandas
+
+dati = pandas.read_csv("laikapstakli.csv")
+print(dati["temp"])
+
+dati_dict = dati.to_dict()
+print(dati_dict)
+
+temp_list = dati["temp"].to_list()
+print(len(temp_list))
+
+videjais = sum(temp_list)/len(temp_list)
+print(videjais)
+
+print(dati["temp"].mean())
+
+#atrod maksimālo
+print(dati["temp"].max())
+
+#izdod datus pa kolonām
+print(dati["day"])
+print(dati.day)
+
+#izdod datus pa rindām
+print(dati[dati.day == "Monday"])
+print(dati[dati.temp == 22])
+print(dati[dati.temp == dati.temp.max()])
+#farenheitos
+
+print((dati.temp * 1.8) + 32)
+
+mon = dati[dati.day == "Monday"]
+mon_t = mon.temp[0]
+print(mon_t)
+mon_t_f = mon_t*1.8+32
+print(mon_t_f)
+print(f"pirmdienās temperatūra bija{mon_t} jeb {mon_t_f}")
+
+#Izveido savu dataframe
+datu_dict = {
+    "skolēns": ["Ilze", "Aivars", "Katrīna"],
+    "atzīmes":["7","9","6"]
+}
+jaunie_dati = pandas.DataFrame(datu_dict)
+print(jaunie_dati)
+jaunie_dati.to_csv('jaunie_dati.csv') 
+
+
+
+
+import pandas
+
+dati = pandas.read_csv("vaveres.csv")
+dati_dict = dati.to_dict()
+print(dati_dict)
+fur_list = dati["Primary Fur Color"].to_list()
+print(dati["Primary Fur Color"])
