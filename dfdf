@@ -52,6 +52,14 @@ import pandas
 
 dati = pandas.read_csv("vaveres.csv")
 dati_dict = dati.to_dict()
-print(dati_dict)
-fur_list = dati["Primary Fur Color"].to_list()
-print(dati["Primary Fur Color"])
+# fur_list = dati["Primary Fur Color"].to_list()
+# print(fur_list)
+
+print(dati[dati["Primary Fur Color"] == "Gray"])
+# print(dati[dati["Combination of Primary and Highlight Color"] == "Gray+White"])
+
+
+print(dati[dati["Primary Fur Color"] == "Gray"] [dati["Highlight Fur Color"] == "White"] [dati["Runs from"] == True])
+print(dati.columns)
+# print("True" == True)
+print(dati["Primary Fur Color"].value_counts())
