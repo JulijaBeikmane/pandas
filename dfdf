@@ -47,7 +47,7 @@ jaunie_dati.to_csv('jaunie_dati.csv')
 
 
 
-
+--------------------------------------------------------------
 import pandas
 
 dati = pandas.read_csv("vaveres.csv")
@@ -63,3 +63,43 @@ print(dati[dati["Primary Fur Color"] == "Gray"] [dati["Highlight Fur Color"] == 
 print(dati.columns)
 # print("True" == True)
 print(dati["Primary Fur Color"].value_counts())
+------------------------------------------------------------------------------------
+import pandas
+
+dati = pandas.read_csv("vaveres.csv")
+dati_dict = dati.to_dict()
+# fur_list = dati["Primary Fur Color"].to_list()
+# print(dati["Primary Fur Color"])
+gray =(dati[dati["Primary Fur Color"] == "Gray"])
+rudas =(dati[dati["Primary Fur Color"] == "Cinnamon"])
+black =(dati[dati["Primary Fur Color"] == "Black"])
+g_vav = len(gray)
+b_vav = len(rudas)
+r_vav = len(black)
+print(f"There are {g_vav} gray squirrels, {b_vav} black squirrrels, {r_vav} cinnamon squirrels")
+
+vaveres_dict = {
+    "Krāsa": ["Gray", "Black", "Cinnamon"],
+    "Skaits":[g_vav,b_vav,r_vav]
+}
+vaveres_dati = pandas.DataFrame(vaveres_dict)
+vaveres_dati.to_csv('vaverescolor_dati.csv') 
+
+
+#Ages
+ages =(dati["Age"])
+ages_v = len(ages)
+# print(ages)
+# print(dati["Age"].value_counts())
+Adult =(dati[dati["Age"] == "Adult"])
+Juvenile =(dati[dati["Age"] == "Juvenile"])
+Adult_v = len(Adult)
+Juvenile_v = len(Juvenile)
+not_founded = ages_v - (Adult_v + Juvenile_v)
+print(f"There are {Adult_v} adult squirrels, {Juvenile_v} juvenile squirrels,{not_founded} not known")
+vaveres_age_dict = {
+    "age": ["Adult", "Juveline", "Not_known"],
+    "Skaits":[Adult_v,Juvenile_v,not_founded]
+}
+vaveres_age_dati = pandas.DataFrame(vaveres_age_dict)
+vaveres_age_dati.to_csv('vaverescolor_dati.csv') 
