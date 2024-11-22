@@ -2,7 +2,7 @@ class QuizBrain:
     def __init__(self, jaut_saraksts): 
         self.jaut_saraksts = jaut_saraksts
         self.jaut_nr = 0
-        punkti = 0
+        self.punkti = 0
 
     def vel_ir_jautajumi(self):
         return self.jaut_nr < len(self.jaut_saraksts)
@@ -29,6 +29,5 @@ class QuizBrain:
             print(f"Pareizā atbilde ir {pareiza_atbilde}.")
             print(f"Tev ir {self.punkti} no {self.jaut_nr} punktiem.")
             print("\n")
-
 
     
