@@ -1,6 +1,5 @@
 class Jautajumi:
-     def __init__(self, jaut, atbildes):
-          self.jaut = jaut
-          self.atbildes = atbildes
+     def __init__(self, teksts, atbilde):
+          self.teksts = teksts
+          self.atbilde = atbilde
 jauns_jaut = Jautajumi("kaut kas", "Patiesi")
-          
