@@ -1,4 +1,3 @@
-
 from dati import dotie_jautajumi
 from jautajuma_modelis import Jautajumi
 from viktorinas_pamats import QuizBrain
