@@ -1,0 +1,21 @@
+# Importējam skaitlotajs.py bibliotēku
+from skaitlotajs import vardotajs
+
+# Lietotāja ievade
+punkti = int(input("Ievadi iegūto punktu skaitu: "))
+
+# Izmantojam bibliotēkas klasi
+forma = vardotajs(punkti)
+
+
+forma = vardotajs(punkti)
+
+forma = vardotajs(punkt
+
+forma = vardotajs(p
+
+forma = vardot
+
+forma =
+# Izvade
+print(f"Tu ieguvi {punkti} {forma}.")
